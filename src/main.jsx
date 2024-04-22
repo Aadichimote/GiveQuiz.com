@@ -8,6 +8,7 @@ import {
 import "./index.css";
 import Home from "./componennts/Home";
 import Quiz from "./componennts/Quiz";
+import About from "./componennts/About";
 
 const router = createBrowserRouter([
   {
@@ -21,7 +22,12 @@ const router = createBrowserRouter([
     {
       path:"/quiz",
       element:<Quiz/>
-    }
+    },
+    {
+      path:"/about",
+      element:<About/>
+    },
+    
   ]
   },
 ]);

@@ -8,3 +8,32 @@
     top: -35px;
     left: 51px;
 }
+.background{
+    background-color: rgba(169, 169, 72, 0.712);
+    /*background-image: url('../public/images/837f048712415639a2a6097454b04786.jpg');  
+*/    background-size: cover;
+    border-radius: 20px;
+    background-position: center;
+    height: 120vh; /* Adjust height as needed */
+    display: flex;
+    background-attachment: fixed;
+    justify-content: center;
+    align-items: center;
+     /* Text color */
+    font-size: 24px;
+    
+     /* Adjust font size as needed */
+  }
+.source{
+    padding: 10px;
+    border:2px solid black;
+    border-radius: 15px;
+    color: rgba(0, 0, 0, 1);
+    
+}
+.bcot{
+margin: 10px;
+}
+.pad{
+    margin: 122px;
+}
