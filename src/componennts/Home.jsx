@@ -2,27 +2,28 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Loading from "./Loading";
 
-const Home=  () => {
+const Home = () => {
   const [loading, setloading] = useState(false);
-  const navigate=useNavigate()
+  const navigate = useNavigate();
 
   const handlestatequiz = () => {
     setloading(true);
-    setTimeout(()=>{
-      navigate('quiz')
-      
-      setloading(false);},2000);
-     
+    setTimeout(() => {
+      navigate("quiz");
+
+      setloading(false);
+    }, 2000);
   };
   const handlequizstate = () => {
     setloading(true);
-    navigate('about')
-  }
+    navigate("about");
+  };
 
-  
   return (
     <section className=" bg:w-9/12 md:w-[90%] px-4 mx-auto mt-12 flex flex-col md:flex-row-reverse justify-between items-center">
-      {loading && <Loading message=" Stay seated Stay Sharp. Starting Quiz in a moment! " />}
+      {loading && (
+        <Loading message=" Stay seated Stay Sharp. Starting Quiz in a moment! " />
+      )}
       <div className="md:w-1/2 w-full">
         <img
           src="../../public/images/banner.png"
@@ -45,14 +46,31 @@ const Home=  () => {
             Start Quiz
           </button>
 
-          <button onClick={ handlequizstate} className=" px-6  py-2 text-yellow-500 ml-3 hover:bg-yellow-500 hover:text-white transition-all duration-300 ease-in">
+          <button
+            onClick={handlequizstate}
+            className=" px-6 flex rounded py-2 text-yellow-500 ml-3 hover:bg-yellow-500 hover:text-white transition-all duration-300 ease-in"
+          >
             {" "}
-            >learn more
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="m8.25 4.5 7.5 7.5-7.5 7.5"
+              />
+            </svg>
+            learn more
           </button>
         </div>
       </div>
     </section>
   );
-}
+};
 
 export default Home;
